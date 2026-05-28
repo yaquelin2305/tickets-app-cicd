@@ -9,7 +9,7 @@ on:
 jobs:
 
   # ==========================================
-  # 🧪 1. TESTS + SONARCLOUD
+  # 🧪 1. TESTS + SONARCLOUD + ARTEFACTOS
   # ==========================================
   sonar:
     name: Tests & SonarCloud Analysis
@@ -31,6 +31,16 @@ jobs:
 
       - name: Ejecutar pruebas unitarias
         run: ./mvnw test -Dtest=CreateTicketUseCaseTest,GetTicketUseCaseTest,TicketTest
+
+      # IE2: Generación y Publicación del Artefacto de Pruebas
+      # Este paso se ejecuta SIEMPRE (incluso si algún test falla) para poder auditar los errores
+      - name: Publicar Artefacto de Reportes de Test
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-pruebas-unitarias
+          path: target/surefire-reports/
+          retention-days: 5
 
       - name: Analisis SonarCloud (bloquea si falla)
         env:
@@ -72,7 +82,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }} # ← Esto lo lee solo GitHub, no crees nada en Secrets
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build y Push imagen Docker
         uses: docker/build-push-action@v5
@@ -103,7 +113,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }} # ← Esto lo lee solo GitHub, no crees nada en Secrets
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy via Docker Compose
         env:
