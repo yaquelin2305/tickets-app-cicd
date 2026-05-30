@@ -173,19 +173,22 @@ Validación del Software: Abre tu navegador favorito e ingresa a la dirección l
 
 ---
 
+---
+
 ## 📸 6. Evidencias de Funcionamiento Exitoso
 
-A continuación, se presentan las capturas de pantalla que validan el correcto despliegue local, la ejecución del pipeline y la respuesta del microservicio:
+A continuación, se presentan las capturas de pantalla que validan el correcto despliegue local, la ejecución
 
 ### 🔹 Evidencia 1: Despliegue de la Aplicación y Contenedores Activos
-<img width="1123" height="555" alt="Image" src="https://github.com/user-attachments/assets/23ab17d2-4074-4c53-ab99-586f114f03fd" />
+![Docker](https://github.com/user-attachments/assets/23ab17d2-4074-4c53-ab99-586f114f03fd)
 
 ### 🔹 Evidencia 2: Monitoreo y Logs en Docker Desktop
-<img width="1210" height="430" alt="Image" src="https://github.com/user-attachments/assets/40a23cd1-0cb1-4d43-bf38-29cfe285137b" />
+![Logs](https://github.com/user-attachments/assets/40a23cd1-0cb1-4d43-bf38-29cfe285137b)
 
 ### 🔹 Evidencia 3: Respuesta Exitosa del Endpoint (/tickets/ping) con Integrantes
-<img width="708" height="150" alt="Image" src="https://github.com/user-attachments/assets/87c19049-4457-4857-9d40-c357b4c0036f" />
+![Ping](https://github.com/user-attachments/assets/87c19049-4457-4857-9d40-c357b4c0036f)
 
+---
 
 
 🤖 6. Declaración de Uso de Inteligencia Artificial
