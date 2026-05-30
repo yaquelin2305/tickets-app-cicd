@@ -179,7 +179,15 @@ A continuación, se presentan las capturas de pantalla que validan el correcto d
 
 ![Ping](https://github.com/user-attachments/assets/87c19049-4457-4857-9d40-c357b4c0036f)
 
----
+### 🔹 Evidencia 4: Ejecución Exitosa del Pipeline CI/CD en GitHub Actions
+
+![CI/CD Pipeline](https://github.com/user-attachments/assets/313a6632-a54a-492b-bf35-ff4b3f4898ba)
+
+### 🔹 Evidencia 5: Trazabilidad y Descarga de Artefactos de Compilación
+
+![Artifacts Traceability](https://github.com/user-attachments/assets/fac1421f-6b7e-486e-92a9-874fafa8d1e1)
+
+
 
 🤖 7. Declaración de Uso de Inteligencia Artificial
 En el desarrollo y documentación avanzada de este proyecto se utilizó la asistencia tecnológica de Google Gemini como herramienta de co-pilotaje y apoyo técnico para la optimización de sintaxis en scripts Yaml, depuración de errores de sockets en entornos de red locales de Windows, redacción estandarizada de mensajes semánticos de Git (Commits) y estructuración de la documentación técnica formal presente en este archivo educativo. Las decisiones estructurales de código, lógica y justificaciones del modelo de arquitectura hexagonal fueron completadas en su totalidad por los ingenieros del equipo.
