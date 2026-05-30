@@ -177,16 +177,15 @@ A continuación, se presentan las capturas de pantalla que validan el correcto d
 
 ### 🔹 Evidencia 3: Respuesta Exitosa del Endpoint (/tickets/ping) con Integrantes
 
-![Ping](https://github.com/user-attachments/assets/87c19049-4457-4857-9d40-c357b4c0036f)
+<img width="708" height="150" alt="Image" src="https://github.com/user-attachments/assets/2f41668a-0f47-4be7-b6ac-f7e974aa6a29" />
 
 ### 🔹 Evidencia 4: Ejecución Exitosa del Pipeline CI/CD en GitHub Actions
 
 ![CI/CD Pipeline](https://github.com/user-attachments/assets/313a6632-a54a-492b-bf35-ff4b3f4898ba)
 
-### 🔹 Evidencia 5: Trazabilidad y Descarga de Artefactos de Compilación
+### 🔹 Evidencia 4: Trazabilidad y Descarga de Artefactos de Compilación
 
 ![Artifacts Traceability](https://github.com/user-attachments/assets/fac1421f-6b7e-486e-92a9-874fafa8d1e1)
-
 
 
 🤖 7. Declaración de Uso de Inteligencia Artificial
