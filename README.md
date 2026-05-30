@@ -179,13 +179,18 @@ A continuación, se presentan las capturas de pantalla que validan el correcto d
 
 <img width="708" height="150" alt="Image" src="https://github.com/user-attachments/assets/2f41668a-0f47-4be7-b6ac-f7e974aa6a29" />
 
-### 🔹 Evidencia 4: Ejecución Exitosa del Pipeline CI/CD en GitHub Actions
+### 🔹 Evidencia 4: Vinculación Exitosa del Self-Hosted Runner en Windows
+
+![Runner Config](https://github.com/user-attachments/assets/9ef59651-ffff-4659-a322-fd750ac08651)
+
+### 🔹 Evidencia 5: Ejecución Exitosa del Pipeline CI/CD en GitHub Actions
 
 ![CI/CD Pipeline](https://github.com/user-attachments/assets/313a6632-a54a-492b-bf35-ff4b3f4898ba)
 
-### 🔹 Evidencia 4: Trazabilidad y Descarga de Artefactos de Compilación
+### 🔹 Evidencia 6: Trazabilidad y Descarga de Artefactos de Compilación
 
 ![Artifacts Traceability](https://github.com/user-attachments/assets/fac1421f-6b7e-486e-92a9-874fafa8d1e1)
+
 
 
 🤖 7. Declaración de Uso de Inteligencia Artificial
