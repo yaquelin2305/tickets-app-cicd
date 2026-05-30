@@ -163,12 +163,24 @@ Verificación del Ciclo Automatizado: El pipeline despertará de inmediato. Ver�
 
 Validación del Software: Abre tu navegador favorito e ingresa a la dirección local de escucha: http://localhost:8081/tickets/ping. ¡Verás tus cambios de código e integrantes reflejados en pantalla de manera instantánea y automática sin haber ejecutado ningún comando manual de despliegue!
 
-📸 6. Evidencias de Funcionamiento Exitoso
+## 📸 6. Evidencias de Funcionamiento Exitoso
+
 A continuación, se presentan las capturas de pantalla que validan el correcto despliegue local, la ejecución del pipeline y la respuesta del microservicio:
 
-🔹 Evidencia 1: Despliegue de la Aplicación y Contenedores Activos
-🔹 Evidencia 2: Monitoreo y Logs en Docker Desktop
-🔹 Evidencia 3: Respuesta Exitosa del Endpoint (/tickets/ping) con Integrantes
+### 🔹 Evidencia 1: Despliegue de la Aplicación y Contenedores Activos
+
+![Docker](https://github.com/user-attachments/assets/23ab17d2-4074-4c53-ab99-586f114f03fd)
+
+### 🔹 Evidencia 2: Monitoreo y Logs en Docker Desktop
+
+![Logs](https://github.com/user-attachments/assets/40a23cd1-0cb1-4d43-bf38-29cfe285137b)
+
+### 🔹 Evidencia 3: Respuesta Exitosa del Endpoint (/tickets/ping) con Integrantes
+
+![Ping](https://github.com/user-attachments/assets/87c19049-4457-4857-9d40-c357b4c0036f)
+
+---
+
 🤖 7. Declaración de Uso de Inteligencia Artificial
 En el desarrollo y documentación avanzada de este proyecto se utilizó la asistencia tecnológica de Google Gemini como herramienta de co-pilotaje y apoyo técnico para la optimización de sintaxis en scripts Yaml, depuración de errores de sockets en entornos de red locales de Windows, redacción estandarizada de mensajes semánticos de Git (Commits) y estructuración de la documentación técnica formal presente en este archivo educativo. Las decisiones estructurales de código, lógica y justificaciones del modelo de arquitectura hexagonal fueron completadas en su totalidad por los ingenieros del equipo.
 
