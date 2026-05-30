@@ -9,7 +9,7 @@ on:
 jobs:
 
   # ==========================================
-  # 🧪 1. TESTS + SONARCLOUD + ARTEFACTOS
+  # 🧪 1. TESTS + SONARCLOUD + ARTEFACTOS (En la nube de GitHub)
   # ==========================================
   sonar:
     name: Tests & SonarCloud Analysis
@@ -30,10 +30,9 @@ jobs:
         run: chmod +x mvnw
 
       - name: Ejecutar pruebas unitarias
-        run: ./mvnw test -Dtest=CreateTicketUseCaseTest,GetTicketUseCaseTest,TicketTest
+        run: ./mvnw test -Dtest=CreateTicketUseCaseTest,GetTicketUseCaseTest,TicketTest,TicketControllerTest
 
-      # IE2: Generación y Publicación del Artefacto de Pruebas
-      # Este paso se ejecuta SIEMPRE (incluso si algún test falla) para poder auditar los errores
+      # Generación y Publicación del Artefacto de Pruebas
       - name: Publicar Artefacto de Reportes de Test
         if: always()
         uses: actions/upload-artifact@v4
@@ -47,11 +46,17 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           ./mvnw verify sonar:sonar \
-            -Dtest=CreateTicketUseCaseTest,GetTicketUseCaseTest,TicketTest \
+            -Dtest=CreateTicketUseCaseTest,GetTicketUseCaseTest,TicketTest,TicketControllerTest \
             -Dsonar.projectKey="${{ secrets.SONAR_PROJECT_KEY }}" \
             -Dsonar.organization="${{ secrets.SONAR_ORGANIZATION }}" \
             -Dsonar.host.url="https://sonarcloud.io" \
             -Dsonar.token="${{ secrets.SONAR_TOKEN }}"
+
+      - name: Subir reporte de cobertura Jacoco
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report-${{ github.sha }}
+          path: target/site/jacoco/
 
       - name: Compilar proyecto
         run: ./mvnw clean package -DskipTests
@@ -63,7 +68,7 @@ jobs:
           path: target/*.jar
 
   # ==========================================
-  # 🐳 2. BUILD DOCKER IMAGE
+  # 🐳 2. BUILD DOCKER IMAGE (En la nube de GitHub)
   # ==========================================
   build-image:
     name: Build & Push Docker Image
@@ -94,11 +99,11 @@ jobs:
             ghcr.io/${{ github.repository }}/tickets-app:${{ github.sha }}
 
   # ==========================================
-  # 📦 3. DEPLOY CON DOCKER COMPOSE
+  # 📦 3. DEPLOY CON DOCKER COMPOSE (En tu Computadora)
   # ==========================================
   deploy:
     name: Deploy with Docker Compose
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: build-image
     permissions:
       contents: read
