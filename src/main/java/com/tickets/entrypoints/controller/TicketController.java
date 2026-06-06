@@ -20,7 +20,7 @@ public class TicketController {
 
     @GetMapping("/ping")
 public String ping() {
-    return "Despliegue Automatizado Exitoso - Integrantes: Yaquelin Rugel & Yeider Catari";
+    return "Despliegue Automatizado Exitoso - Integrantes: Yaquelin Rugel & Yeider Catari muestra para que vea el despliegue el profesor";
 }
 
     @PostMapping

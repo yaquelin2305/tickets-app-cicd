@@ -1,14 +1,15 @@
-Markdown
 🎟️ Microservicio de Tickets - Capa DevOps Avanzada
-Este repositorio contiene la solución del Microservicio de Tickets desarrollado en Java 17 con Spring Boot bajo los lineamientos de la Arquitectura Hexagonal. En esta entrega, se ha consolidado un ciclo completo de Integración Continua (CI) y Despliegue Continuo (CD) totalmente automatizado a través de GitHub Actions, incorporando empaquetado seguro, análisis estático de código, gobernanza estricta de accesos y despliegues controlados en entornos aislados de infraestructura local mediante un Self-Hosted Runner.
+Este repositorio contiene la solución del Microservicio de Tickets desarrollado en Java 17 con Spring Boot, estructurado bajo los lineamientos de la Arquitectura Hexagonal.
 
-📋 1. ¿De qué se trata el Proyecto? (Inducción para Nuevos Desarrolladores)
+En esta entrega se consolidó un ciclo completo de Integración Continua (CI) y Despliegue Continuo (CD) totalmente automatizado a través de GitHub Actions, incorporando empaquetado seguro, análisis estático de código, gobernanza estricta de accesos y despliegues controlados en entornos aislados de infraestructura local mediante un Self-Hosted Runner.
+
+📋 1. ¿De qué se trata el Proyecto?
 Este microservicio se encarga de la gestión del ciclo de vida de tickets de soporte técnico o de atención. Al estar diseñado bajo Arquitectura Hexagonal (Puertos y Adaptadores), el núcleo del negocio (las reglas de qué es un ticket) está completamente desacoplado de la base de datos, de la web y de los controladores de Spring Framework. Esto permite que el sistema sea altamente mantenible, escalable y fácil de probar de forma aislada.
 
 🚀 2. Arquitectura del Pipeline de CI/CD
 El flujo de automatización se encuentra estructurado de manera secuencial a través de dependencias jerárquicas (needs) dentro de .github/workflows/ci.yml. El pipeline está programado para ejecutarse ante eventos de push y pull_request en las ramas main y develop, garantizando que ningún código defectuoso o vulnerable llegue a producción sin validación previa.
 
-📊 Diagrama del Flujo Automatizado e Infraestructura híbrida
+📊 Diagrama del Flujo Automatizado e Infraestructura Híbrida
 Plaintext
   [ Evento de Git: Push / PR ]
                 │
